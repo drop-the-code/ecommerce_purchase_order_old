@@ -1,8 +1,7 @@
 const enumHelper = {};
 
-
 enumHelper.dotenv = {
-  casesWhereVariablesAreNotLoaded = ['homolog', 'heroku']
-}
+  casesWhereVariablesAreNotLoaded: ['homolog', 'heroku'],
+};
 
 module.exports = enumHelper;

@@ -1,5 +1,10 @@
 const error = {};
-
+error.dotenv = {
+  errorOnLoadEnvVars: {
+    code: 'ENV0001',
+    message: 'Erro ao carregar variaveis de ambiente',
+  },
+};
 error.mongodb = {
   errorConnectingToDataBase: {
     code: 'MDB0001',

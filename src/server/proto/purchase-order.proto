@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package purchaseOrderPackagePb;
+
+message Empty {
+}
+
+
+service purchaseOrderService {
+  rpc FindAllPurchaseOrder(Empty) returns (Empty);
+  rpc CreateNewPurchaseOrder(Empty) returns (Empty);
+  rpc FindOnePurchaseOrder(Empty) returns (Empty);
+}

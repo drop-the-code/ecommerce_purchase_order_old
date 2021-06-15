@@ -27,14 +27,14 @@ const findOnePurchaseOrder = async (call, callback) => {
       call.request.payload
     );
 
-    if (!purchaseOrder?._id) {
-      return grpcErrorHandler(
-        customError.purchaseOrder.purchaseOrderNotFound,
-        callback
-      );
+    if (purchaseOrder && purchaseOrder._id) {
+      return callback(null, { result: purchaseOrder });
     }
 
-    return callback(null, { result: purchaseOrder });
+    return grpcErrorHandler(
+      customError.purchaseOrder.purchaseOrderNotFound,
+      callback
+    );
   } catch (error) {
     return grpcErrorHandler(error, callback);
   }

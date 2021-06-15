@@ -1,6 +1,6 @@
 const service = require('./service');
-const customError = require('../helpers/customError');
-const { grpcErrorHandler } = require('../helpers/grpcErrorHandler');
+const customError = require('../../helpers/customError');
+const { grpcErrorHandler } = require('../../helpers/grpcErrorHandler');
 
 const isValidPayload = () => false;
 

@@ -1,6 +1,19 @@
 const error = {};
 const grpc = require('grpc');
 
+error.grpc = {
+  errorOnLoadProtoFiles: {
+    errorCode: 'GRP0001',
+    code: grpc.status.INTERNAL,
+    message: 'Erro ao inicializar proto files',
+  },
+  errorOnInitializeGrpcServer: {
+    errorCode: 'GRP0002',
+    code: grpc.status.INTERNAL,
+    message: 'Erro ao inicializar Servidor gRPC',
+  },
+};
+
 error.dotenv = {
   errorOnLoadEnvVars: {
     errorCode: 'ENV0001',

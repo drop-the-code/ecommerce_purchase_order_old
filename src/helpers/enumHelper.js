@@ -7,7 +7,7 @@ enumHelper.dotenv = {
 enumHelper.grpcMethods = {
   CreateNewPurchaseOrder: 'CreateNewPurchaseOrder',
   FindOnePurchaseOrder: 'FindOnePurchaseOrder',
-  FindAllPurchaseOrderByUserId: 'FindAllPurchaseOrderByUserId',
+  FindAllPurchaseOrder: 'FindAllPurchaseOrder',
 };
 
 module.exports = enumHelper;

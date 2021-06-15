@@ -1,6 +1,6 @@
 const repository = require('./repository');
-const logger = require('../helpers/logger');
-const customError = require('../helpers/customError');
+const logger = require('../../helpers/logger');
+const customError = require('../../helpers/customError');
 
 const createNewPurchaseOrder = async (payload) => {
   try {

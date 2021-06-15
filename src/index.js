@@ -1,15 +1,15 @@
 const logger = require('./helpers/logger');
 const { loadEnvVars } = require('./config');
 const { connectWithDataBase } = require('./mongodb/connection');
+const { createGrpcServer } = require('./server');
 
 (async () => {
   try {
     loadEnvVars();
     await connectWithDataBase();
-    logger.info('Aplicacao inicializada');
+    createGrpcServer();
   } catch (error) {
     logger.error(error);
     logger.warn('Encerrando Servidor');
-    process.exit(1);
   }
 })();

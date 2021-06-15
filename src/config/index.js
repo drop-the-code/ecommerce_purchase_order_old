@@ -8,7 +8,7 @@ const loadEnvVars = () => {
   try {
     logger.info('Carregando variaveis de ambiente');
 
-    const { NODE_ENV } = process.env;
+    const { NODE_ENV = 'dev' } = process.env;
     if (enumHelper.dotenv.casesWhereVariablesAreNotLoaded.includes(NODE_ENV))
       return;
 

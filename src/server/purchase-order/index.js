@@ -1,7 +1,9 @@
 const handler = require('./handler');
-const { grpcMethods } = require('../helpers/enumHelper');
+const { grpcMethods } = require('../../helpers/enumHelper');
 
-module.exports = {
+const purchaseOrder = {
   [grpcMethods.CreateNewPurchaseOrder]: handler.createNewPurchaseOrder,
   [grpcMethods.FindOnePurchaseOrder]: handler.findOnePurchaseOrder,
 };
+
+module.exports = { purchaseOrder };

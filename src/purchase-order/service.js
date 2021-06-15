@@ -13,4 +13,15 @@ const createNewPurchaseOrder = async (payload) => {
   }
 };
 
-module.exports = { createNewPurchaseOrder };
+const findOnePurchaseOrder = async (payload) => {
+  try {
+    const query = { _id: payload.id, id_user: payload.id_user };
+    const purchaseOrder = await repository.findOne(query);
+    return purchaseOrder;
+  } catch (error) {
+    logger.error(error);
+    throw customError.purchaseOrder.failToFetchPurchaseOrder;
+  }
+};
+
+module.exports = { createNewPurchaseOrder, findOnePurchaseOrder };

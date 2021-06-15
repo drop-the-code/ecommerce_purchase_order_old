@@ -31,6 +31,18 @@ error.purchaseOrder = {
     code: grpc.status.FAILED_PRECONDITION,
     message: 'Erro ao criar nova ordem de pagamento',
   },
+
+  failToFetchPurchaseOrder: {
+    errorCode: 'PCO0002',
+    code: grpc.status.FAILED_PRECONDITION,
+    message: 'Erro ao buscar a ordem de pagamento',
+  },
+
+  purchaseOrderNotFound: {
+    errorCode: 'PCO0003',
+    code: grpc.status.NOT_FOUND,
+    message: 'Ordem de pagamento não econtrada',
+  },
 };
 
 module.exports = error;
